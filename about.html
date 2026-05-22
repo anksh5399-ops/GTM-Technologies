@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTM Practice - About Product</title>
+    <!-- Paste your Google Tag Manager Container Code here -->
+
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f4f4f9; }
+        nav { background: #333; padding: 10px; border-radius: 5px; }
+        nav a { color: #fff; margin-right: 15px; text-decoration: none; font-weight: bold; }
+        .container { max-width: 800px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .product-card { border: 1px solid #ddd; padding: 20px; border-radius: 8px; text-align: center; max-width: 300px; margin: 20px 0; }
+        .price { font-size: 24px; color: #28a745; font-weight: bold; margin: 10px 0; }
+        .btn-buy { background: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; width: 100%; }
+        .btn-buy:hover { background: #218838; }
+    </style>
+</head>
+<body>
+    <!-- Paste your GTM <body> code here -->
+
+    <div class="container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Product</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <h1>Our Premium Product</h1>
+        <p>Learn how to capture dynamic values from the webpage using DOM Element variables or Custom JavaScript variables.</p>
+
+        <div class="product-card">
+            <h3>Analytics Premium Dashboard</h3>
+            <p class="price" id="prod-price" data-currency="INR">₹2,499</p>
+            <!-- You can use GTM to grab the id, class, or the data-attributes from this button -->
+            <button class="btn-buy" id="btn-add-to-cart" data-product-id="prod_9988" data-product-name="Premium Dashboard">
+                Add to Cart
+            </button>
+        </div>
+    </div>
+</body>
+</html>

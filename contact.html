@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTM Practice - Contact</title>
+    <!-- Paste your Google Tag Manager Container Code here -->
+
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f4f4f9; }
+        nav { background: #333; padding: 10px; border-radius: 5px; }
+        nav a { color: #fff; margin-right: 15px; text-decoration: none; font-weight: bold; }
+        .container { max-width: 800px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input[type="text"], input[type="email"], select { width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 4px; box-sizing: border-box; }
+        .btn-submit { background: #17a2b8; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+        .btn-submit:hover { background: #138496; }
+        .success-message { display: none; color: #155724; background-color: #d4edda; border: 1px solid #c3e6cb; padding: 15px; border-radius: 5px; margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <!-- Paste your GTM <body> code here -->
+
+    <div class="container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Product</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <h1>Contact Support</h1>
+        <p>Test standard form submissions, or practice passing data to the <code>dataLayer</code> manually upon submission.</p>
+
+        <form id="lead-form" onsubmit="handleFormSubmit(event)">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="userName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="userEmail" required>
+            </div>
+            <div class="form-group">
+                <label for="interest">Reason for Contact</label>
+                <select id="interest" name="userInterest">
+                    <option value="general">General Inquiry</option>
+                    <option value="sales">Sales & Pricing</option>
+                    <option value="support">Technical Support</option>
+                </select>
+            </div>
+            <button type="submit" class="btn-submit" id="submit-form-btn">Submit Request</button>
+        </form>
+
+        <div id="thank-you-msg" class="success-message">
+            Thank you! Your request has been successfully processed. (Excellent spot for an Element Visibility Trigger!)
+        </div>
+    </div>
+
+    <script>
+        // Simulates a modern async form submission and pushes an event to the dataLayer
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Extract values for dataLayer tracking practice
+            var selectedInterest = document.getElementById('interest').value;
+            
+            // Optional dataLayer push simulation
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'form_submission_success',
+                'formId': 'lead-form',
+                'formCategory': selectedInterest
+            });
+
+            // UI Update
+            document.getElementById('lead-form').style.display = 'none';
+            document.getElementById('thank-you-msg').style.display = 'block';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GTM Practice - Home</title>
+    <!-- Paste your Google Tag Manager Container Code here -->
+    
+    <style>
+        body { font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 20px; background-color: #f4f4f9; }
+        nav { background: #333; padding: 10px; border-radius: 5px; }
+        nav a { color: #fff; margin-right: 15px; text-decoration: none; font-weight: bold; }
+        nav a:hover { text-decoration: underline; }
+        .container { max-width: 800px; margin: 20px auto; background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .banner { background: #ffebd6; border: 2px dashed #ff9900; padding: 15px; margin: 20px 0; text-align: center; border-radius: 5px; cursor: pointer; }
+        .btn { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        .btn:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <!-- Paste your GTM <body> code right after the opening body tag -->
+
+    <div class="container">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Product</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <h1>Welcome to the GTM Practice Environment</h1>
+        <p>This is a simple sandbox to test triggers, variables, and tags without any complex frameworks cluttering the DOM.</p>
+
+        <!-- Use this banner to test Click - All Elements or Click - Just Links -->
+        <div class="banner" id="promo-banner" data-promo-name="Spring Sale 2026">
+            <h3>Special Offer! Click here to reveal your coupon code.</h3>
+            <p>Perfect for testing Element Visibility or Click tracking with Data Attributes.</p>
+        </div>
+
+        <h2>Interactable Elements</h2>
+        <p>Try tracking this specific button click using its ID or Class.</p>
+        <button type="button" class="btn" id="main-cta-btn">Download Free Guide</button>
+    </div>
+</body>
+</html>
